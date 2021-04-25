@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@drawable/background_cell"
+    >
+    
+    <TextView
+        android:id="@+id/userTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="User"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        android:textColor="@color/dark_purple"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/usernameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userTV"
+        android:text=" @username"
+        android:textStyle="italic"
+        android:textColor="@color/silver"
+        android:textSize="15sp"
+        />
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userTV"
+        app:layout_constraintBottom_toTopOf="@id/usernameTV"
+        android:src="@drawable/arrow"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postsList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameTV"
+        android:spinnerMode="dropdown"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
